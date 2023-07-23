@@ -7,6 +7,7 @@ function NavBar() {
       <ul className='navbar'>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/subtraction'>Subtraction</Link></li>
+        <li><Link to='/multiplication'>Multiplication</Link></li>
         <li><Link to='/addition'>Addition</Link></li>
         <li><Link to='/division'>Division</Link></li>
       </ul>

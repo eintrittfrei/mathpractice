@@ -5,6 +5,7 @@ import { CheckResult } from "../utils/CheckUserResult"
 
 
 function Addition() {
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false)
   const [isResultCorrect, setIsResultCorrect] = useState(null)
   const [computerResult, setComputerResult] = useState('')
   const [challengeText, setChallengeText] = useState('')
@@ -20,6 +21,9 @@ let resultIsCorrect
 
 function generateChallenge() {
   setIsResultCorrect(null)
+  setInputValue({ ...inputValue, result: '' })
+  setIsButtonDisabled(true)
+
   number1 = getRandomNumber(1, 1000)
   number2 = getRandomNumber(1, 1000)
   const operator = '+'
@@ -40,17 +44,31 @@ function handleSubmit(event) {
   event.preventDefault()
   resultIsCorrect = CheckResult(inputValue, computerResult)
   setIsResultCorrect(resultIsCorrect)
+  handleButtonDisabled()
   console.log(resultIsCorrect)
+}
+
+function handleButtonDisabled() {
+  if (resultIsCorrect) {
+    setIsButtonDisabled(false)
+  }
 }
 
 
 
   return (
     <>
-  <div>
+  <div className="wrapper">
     <div>
       <h1>Addition</h1>
-      <button className="button-new-math" type="button" onClick={generateChallenge}>New Math</button>
+
+      <button 
+        className="button-new-math" 
+        type="button" 
+        onClick={generateChallenge} 
+        disabled={isButtonDisabled}>New Math
+      </button>
+
       <h2>{challengeText}</h2>
         <form onSubmit={handleSubmit}>
           <input 
@@ -64,6 +82,7 @@ function handleSubmit(event) {
           value="Submit" />
         </form>
     </div>
+
   </div>
   {isResultCorrect === null ? null : 
   (isResultCorrect ? 
