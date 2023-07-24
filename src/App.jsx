@@ -1,11 +1,11 @@
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import NavBar from './components/Navbar'
-import Subtraction from './components/Subtraction'
-import Addition from './components/Addition'
-import Division from './components/Division'
-import Home from './components/Home'
-import Multiplication from './components/Multiplication'
+import Subtraction from './components/pages/Subtraction'
+import Addition from './components/pages/Addition'
+import Division from './components/pages/Division'
+import Home from './components/pages/Home'
+import Multiplication from './components/pages/Multiplication'
 
 function App() {
 

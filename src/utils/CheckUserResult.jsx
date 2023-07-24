@@ -1,9 +1,9 @@
 
 export function CheckResult(input, result) {
-  let userInput = input.result
-  let user = parseInt(userInput)
-  let computer = parseInt(result)
-  console.log('input:', typeof(user))
-  console.log('result:', typeof(computer))
+
+  const userInput = input.result
+  const user = parseInt(userInput)
+  const computer = parseInt(result)
   return user === computer
+  
 }

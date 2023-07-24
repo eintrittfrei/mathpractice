@@ -1,7 +1,7 @@
 
 export function calcResult(number1, number2, operator) {
 
-  const mode = ['+', '-', '/']
+  const mode = ['+', '-', '/', '*']
 
   if (mode.includes(operator)) {
     if (operator === '+') {
@@ -10,9 +10,11 @@ export function calcResult(number1, number2, operator) {
       return number1 - number2
     } else if ( operator === '/') {
       return number1 / number2
-    } else return false 
+    } else if (operator === '*') {
+      return number1 * number2
+    }
+    else return false 
   }
-
 
 
 }
