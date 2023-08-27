@@ -64,8 +64,8 @@ function Division() {
       <div className="wrapper">
         <div>
           <h1>Division</h1>
-
-          <ButtonSubmit
+          <h2>Coming soon ...</h2>
+          {/* <ButtonSubmit
             onClick={generateChallenge}
             isDisabled={isButtonDisabled}
           >Next challenge</ButtonSubmit>
@@ -77,7 +77,7 @@ function Division() {
             inputValue={inputValue.result}
             handleChange={handleChange}
             isSubmitButtonDisabled={isSubmitButtonDisabled}
-          />
+          /> */}
         </div>
 
       </div>
